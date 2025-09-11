@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
+
+@theme inline {
+  --font-sans: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-placeholder: #667085;
+  --color-primary: #101828;
+  --color-secondary: #344054;
+  --color-secondary-hover: #182230;
+  --color-dark-solid: #0c111d;
+  --color-error: #f04438;
+  --color-tertiary: #475467;
+  --color-tertiary-hover: #182230;
+  --color-tertiary-600: #475467;
+  --color-quarterary: #667085;
+  --color-border-primary: #d0d5dd;
+  --color-border-secondary: #eaecf0;
+  --color-border-error: #fda29b;
+  --color-deep-indigo: #0a0118;
+  --color-card-fill: #0c0c0e;
+  --color-light: #f8f8f8;
+  --color-text-light: #fafafa;
+  --color-body-2: #b2b2b2;
+  --color-brand-purple: #7401e8;
+  --color-brand-blue: #1f01ff;
+  --color-brand-purple-light: #bc79ff;
+  --color-brand-brand-orange: #ff621e;
+  --color-btn-gradient: linear-gradient(90deg, #2407f8 0.31%, #7f04ff 100%);
+  --color-dark-to-b: linear-gradient(180deg, rgba(12, 12, 14, 1) 0%, rgba(40, 40, 40, 1) 100%);
+  --color-pseudo: linear-gradient(
+    90.43deg,
+    #7400e8 12.77%,
+    #be67d5 38.49%,
+    #bc79ff 67.36%,
+    #1e00ff 107.78%
+  );
+}
+* {
+  font-family: var(--font-inter);
+}
+
+@utility display-2xl {
+  @apply text-4xl font-bold sm:text-5xl md:text-6xl lg:text-[72px];
+}
+@utility display-xl {
+  @apply text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl;
+}
+@utility display-lg {
+  @apply text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl;
+}
+@utility display-md {
+  @apply text-xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl;
+}
+@utility display-sm {
+  @apply text-lg font-semibold sm:text-xl md:text-2xl lg:text-3xl;
+}
+@utility display-xs {
+  @apply text-xl font-semibold;
+}
+@utility display-2xs {
+  @apply text-lg font-semibold;
+}
+@utility container {
+  @apply mx-auto max-w-7xl px-4 sm:px-5;
+}
+@utility soft-gradient {
+  background:
+    linear-gradient(
+        45deg,
+        hsl(from var(--color-brand-purple) h s l),
+        hsl(from var(--color-brand-blue) h s l)
+      )
+      padding-box,
+    linear-gradient(90deg, rgba(116, 0, 232, 0.1) 0%, rgba(30, 0, 255, 0.15) 100%) border-box;
+}
+
+@layer base {
+  a {
+    @apply text-brand-purple font-semibold hover:underline;
+  }
+  p {
+    @apply text-tertiary;
+  }
+}
+
+.debug {
+  @apply border border-red-500;
+}
+
+body {
+  background-color: #fcfcfd;
+}

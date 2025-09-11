@@ -1,0 +1,28 @@
+{
+	"css.customData": [
+		".vscode/tailwind.json"
+	],
+	"cSpell.words": [
+		"nowcfo"
+	],
+		"tailwindCSS.experimental.configFile": null,
+	"tailwindCSS.includeLanguages": {
+		"html": "html",
+		"javascript": "javascript",
+		"css": "css",
+		"php": "php",
+		"plaintext": "html"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"tailwindCSS.hovers": true,
+	"errorLens.enabled": false,
+  "php.validate.enable": false,
+	"intelephense.diagnostics.enable": false,
+	"intelephense.completion.enable": false,
+	"intelephense.hover.enable": false
+}
