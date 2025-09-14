@@ -16,9 +16,9 @@ const Filter = () => {
 
   return (
     <>
-      <div className='border-border-secondary flex items-center justify-between gap-4 border-b pt-8 pb-5 pl-5'>
+      <div className='border-border-secondary flex gap-4 border-b pt-8 pb-5 pl-5 max-lg:flex-col lg:items-center lg:justify-between'>
         <h5 className='text-lg font-semibold text-neutral-900'>Filters</h5>
-        <div className='flex items-center gap-3'>
+        <div className='flex gap-3 max-lg:flex-row-reverse max-lg:justify-end lg:items-center'>
           <Button variant={'ghost'}>Clear all</Button>
           <Button>Apply</Button>
         </div>

@@ -13,6 +13,7 @@
   --color-primary: #101828;
   --color-secondary: #344054;
   --color-secondary-hover: #182230;
+  --color-secondary-fg: #344054;
   --color-dark-solid: #0c111d;
   --color-error: #f04438;
   --color-tertiary: #475467;
@@ -40,6 +41,8 @@
     #bc79ff 67.36%,
     #1e00ff 107.78%
   );
+
+  --background-image-circular-pattern: url('/images/circles.svg');
 }
 * {
   font-family: var(--font-inter);
@@ -48,27 +51,35 @@
 @utility display-2xl {
   @apply text-4xl font-bold sm:text-5xl md:text-6xl lg:text-[72px];
 }
+
 @utility display-xl {
   @apply text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl;
 }
+
 @utility display-lg {
   @apply text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl;
 }
+
 @utility display-md {
   @apply text-xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl;
 }
+
 @utility display-sm {
   @apply text-lg font-semibold sm:text-xl md:text-2xl lg:text-3xl;
 }
+
 @utility display-xs {
   @apply text-xl font-semibold;
 }
+
 @utility display-2xs {
   @apply text-lg font-semibold;
 }
+
 @utility container {
   @apply mx-auto max-w-7xl px-4 sm:px-5;
 }
+
 @utility soft-gradient {
   background:
     linear-gradient(
@@ -82,10 +93,20 @@
 
 @layer base {
   a {
-    @apply text-brand-purple font-semibold hover:underline;
+    @apply text-brand-purple font-semibold;
   }
   p {
     @apply text-tertiary;
+  }
+  .radial-shine {
+    @apply inline-flex size-20 items-center justify-center rounded-full shadow-sm;
+    --color: #edf0f3;
+    --angle: 180deg;
+    background: linear-gradient(
+      var(--angle),
+      hsl(from var(--color) h s l / 0.5) 0%,
+      var(--color) 100%
+    );
   }
 }
 
@@ -95,4 +116,8 @@
 
 body {
   background-color: #fcfcfd;
+}
+
+.circular-line {
+  @apply before:bg-circular-pattern relative isolate z-10 before:absolute before:-z-10 before:size-80 before:bg-center;
 }

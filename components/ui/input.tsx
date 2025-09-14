@@ -13,9 +13,15 @@ function Input({
   type,
   error,
   label,
+  disabled,
   isSearch = false,
   ...props
-}: ComponentProps<'input'> & { error?: string; label?: string; isSearch?: boolean }) {
+}: ComponentProps<'input'> & {
+  error?: string
+  label?: string
+  isSearch?: boolean
+  disabled?: boolean
+}) {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
@@ -36,10 +42,13 @@ function Input({
             type={showPassword ? 'text' : type}
             data-slot='input'
             className={cn(
-              'file:text-foreground placeholder:text-placeholder selection:text-primary-foreground dark:bg-input/30 border-border-primary flex h-11 w-full min-w-0 rounded-md border bg-transparent px-3.5 py-2.5 text-base leading-6 shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',
-              'focus-visible:ring-brand-purple focus-visible:border-brand-purple focus-visible:ring-1',
-              'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
+              'placeholder:text-placeholder border-border-primary flex h-11 w-full min-w-0 rounded-md border bg-transparent px-3.5 py-2.5 text-base leading-6 shadow-xs transition-[color,box-shadow] outline-none',
+              'focus-visible:border-purple-300 focus-visible:ring-[4px] focus-visible:ring-[#DFD7FD]',
+              type === 'file' &&
+                'file:text-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium',
               error && 'border-border-error',
+              disabled &&
+                'disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',
               isSearch && 'pl-10',
               className
             )}

@@ -15,8 +15,9 @@ import {
   NavigationMenuTrigger
 } from '@/components/ui/navigation-menu'
 import { Button } from '../ui/button'
-import { Bell, MessageSquare } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import NotificationBell from '../notification/Bell'
 
 const UserHeader = () => {
   const pathname = usePathname()
@@ -34,9 +35,6 @@ const UserHeader = () => {
                     <Image src='/primary-logo.svg' alt='Scaledux' fill className='object-contain' />
                   </div>
                 </Link>
-                {/* <div className='flex'>
-                
-              </div> */}
                 <NavigationMenu className='max-sm:hidden'>
                   <NavigationMenuList>
                     {userHeaderItems.map((item) => (
@@ -65,17 +63,17 @@ const UserHeader = () => {
 
               <div className='flex items-center gap-4'>
                 <div className='flex items-center gap-1'>
-                  <Button variant={'ghost'}>
+                  <Button variant={'ghost'} className='size-10 rounded-sm hover:bg-neutral-100'>
                     <MessageSquare className='size-5' />
                   </Button>
-                  <Button variant={'ghost'}>
-                    <Bell className='size-5' />
-                  </Button>
+                  <NotificationBell />
                 </div>
-                <Avatar>
-                  <AvatarImage src='https://github.com/shadcn.png' />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                <Link href={'/my-profile'}>
+                  <Avatar>
+                    <AvatarImage src='https://github.com/shadcn.png' />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </Link>
               </div>
             </div>
           </div>

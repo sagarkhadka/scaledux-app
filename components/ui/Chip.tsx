@@ -6,7 +6,7 @@ const Chip: FC<{ className?: string; label: string }> = ({ className, label }) =
     <>
       <div
         className={cn(
-          'rounded-full border border-neutral-300 px-2 py-0.5',
+          'rounded-full border border-neutral-300 px-2 py-0.5 text-center',
           'text-sm font-medium text-[#363F72]',
           className
         )}>

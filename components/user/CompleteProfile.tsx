@@ -6,17 +6,17 @@ import { ChevronDown } from 'lucide-react'
 const CompleteProfile = () => {
   return (
     <>
-      <div className='from-brand-purple/5 to-brand-blue/20 ring-brand-purple-light/30 flex items-center gap-4 rounded-lg bg-gradient-to-r p-3 ring-2'>
-        <div className='flex items-center gap-4'>
+      <div className='from-brand-purple/5 to-brand-blue/20 ring-brand-purple-light/30 flex items-center gap-4 bg-gradient-to-r p-3 ring-2 max-md:-mx-4 md:rounded-lg'>
+        <div className='flex flex-1 items-center gap-4'>
           <CircularProgress percentage={40} />
           <div className='space-y-0.5'>
             <h2 className='text-secondary-hover text-base font-semibold'>Complete your profile</h2>
-            <p className='text-secondary-hover'>
+            <p className='text-secondary-hover max-lg:hidden'>
               Having a complete verified account will increase the chances of getting projects.
             </p>
           </div>
         </div>
-        <Button variant={'icon'} size='icon'>
+        <Button variant={'icon'} size='icon' className='shrink-0'>
           <ChevronDown className='text-purple-500' />
         </Button>
       </div>

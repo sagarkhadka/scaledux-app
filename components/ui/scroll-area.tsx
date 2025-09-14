@@ -17,7 +17,7 @@ function ScrollArea({
       {...props}>
       <ScrollAreaPrimitive.Viewport
         data-slot='scroll-area-viewport'
-        className='size-full pr-3 outline-none'>
+        className='size-full outline-none [&_>div]:h-full'>
         {children}
       </ScrollAreaPrimitive.Viewport>
       <ScrollBar />

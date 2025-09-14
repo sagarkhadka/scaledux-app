@@ -23,7 +23,7 @@ const ProjectCard = () => {
                   minimalist design and can deliver exceptional results under tight deadlines, I
                   would love to collaborate with you on this exciting journey.
                 </p>
-                <div className='flex items-center gap-2'>
+                <div className='flex flex-wrap items-center gap-2'>
                   <Chip label='Logo design' />
                   <Chip label='Graphic design' />
                   <Chip label='Brand guidelines' />
@@ -34,7 +34,7 @@ const ProjectCard = () => {
               <Heart className='text-brand-purple-light size-5' />
             </Button>
           </div>
-          <div className='flex items-center justify-between gap-4'>
+          <div className='flex items-start justify-between gap-4 max-lg:flex-col lg:items-center'>
             <div className='flex items-center gap-24'>
               <div className='space-y-1'>
                 <span className='text-tertiary inline-block text-xs'>Project category</span>
